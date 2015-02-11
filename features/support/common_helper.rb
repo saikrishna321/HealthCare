@@ -25,4 +25,9 @@ class Helpers
 			return false
 		end
 	end
+
+
+	def click_by_xpath(arg)
+		@@driver.find_element(:xpath, arg).click
+	end
 end

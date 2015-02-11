@@ -16,7 +16,14 @@ BEGIN {
 }
 
 Before do |scenario|
-	@@driver = Selenium::WebDriver.for :firefox
+	if ENV["BROWSER"] == "firefox"
+		@@driver = Selenium::WebDriver.for :firefox
+	elsif ENV["BROWSER"] == "safari"
+		%x( rm ~/Library/Cookies/Cookies.binarycookies )
+		%x( killall cookied )
+		@@driver = Selenium::WebDriver.for :safari
+	end
+
 end
 
 

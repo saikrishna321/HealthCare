@@ -1,3 +1,4 @@
+@login
 Feature: Login
 
     @validlogin
@@ -41,4 +42,37 @@ Feature: Login
 	   Then i should not see the login module
 	   And i should see "Sign in"
 
-	Scenario: To verify, as user I am able to Log Out
+    @logout
+    Scenario: To verify, as user I am able to Log Out
+	   Given i'm on Global Lab Homepage
+	   When i login into the application
+	   Then i should see the user logged
+	   And i logout from the application
+	   And i should see "Sign in"
+
+    @browse_inventory
+    Scenario: To verify, user able to access 'Browse' option without Sign In
+	   Given i'm on Global Lab Homepage
+	   When i click on Browse button
+	   Then i should see "Innovation Inventory"
+
+    @submit_innovation
+    Scenario:To verify, while clicking on 'Submit' option and Sign In
+	   Given i'm on Global Lab Homepage
+	   And i logout from the application if user is logged in
+	   When i click on Submit Button
+	   Then i should see "Login"
+	   And i enter valid credentials
+	   Then i should not see the login module
+	   Then i should see "Submit your innovation."
+
+    @About
+    Scenario: To verify, user able to access 'About' option without Sign In
+	   Given i'm on Global Lab Homepage
+	   And i logout from the application if user is logged in
+	   And i should see "Sign in"
+	   When i click on About Button
+	   Then i should see "Welcome to the Global Lab for Health - the innovation exchange for affordable care"
+
+
+
