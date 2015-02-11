@@ -1,0 +1,5 @@
+[caps]
+platformName = "ios"
+app = "/Users/saikrishna/Downloads/8.1/GroceryiOS.app"
+#app = "/Users/saikrishna/Downloads/sample-code-master/sample-code/examples/ruby/cucumber_ios/GroceryiOS-7.5-3.ipa"
+deviceName = "iPhone 6"
