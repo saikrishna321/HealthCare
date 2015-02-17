@@ -18,6 +18,8 @@ BEGIN {
 Before do |scenario|
 	if ENV["BROWSER"] == "firefox"
 		@@driver = Selenium::WebDriver.for :firefox
+	elsif ENV["BROWSER"] == "chrome"
+		@driver = Selenium::WebDriver.for :chrome
 	elsif ENV["BROWSER"] == "safari"
 		%x( rm ~/Library/Cookies/Cookies.binarycookies )
 		%x( killall cookied )
