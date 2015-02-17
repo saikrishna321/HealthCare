@@ -1,5 +1,5 @@
 Given(/^i'm on Global Lab Homepage$/) do
-   @@login.open_url LIVE_URL
+   @@login.open_url STAGING_URL
    @@helper.wait_for_elementonscreen_by_xpath("//button[@type='button']")
   sleep 2
 end
@@ -56,5 +56,15 @@ And(/^i logout from the application if user is logged in$/) do
     step 'i logout from the application'
   else
     puts 'User is logged out'
+  end
+end
+
+And(/^i login to the application if user is not logged in$/) do
+  page_screen=@@driver.page_source
+  logged_in=page_screen.include? "Sign in"
+  if logged_in
+    step 'i login into the application'
+  else
+    puts 'User is Logged In'
   end
 end
