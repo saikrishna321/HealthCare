@@ -13,5 +13,5 @@ Pre-Requisite
         bundle install ( Will install all the required gem files that helps to execute the tests)
 
 => Executing the scripts on Firefox
-         cucumber --tags @regression --format html --out regression.html BROWSER=firefox ( To run the tests in firefox browser)
-         cucumber --tags @regression --format html --out regression.html BROWSER=chrome ( To run the tests in chrome browser)
+         cucumber --tags @regression --format html --out regression.html BROWSER=firefox LOGIN=username:password( To run the tests in firefox browser)
+         cucumber --tags @regression --format html --out regression.html BROWSER=chrome LOGIN=username:password( To run the tests in chrome browser)
