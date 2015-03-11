@@ -12,6 +12,5 @@ Feature: Registration
 	   And i enter website
 	   And i enter organisation as "Tests"
 	   And i enter the password "Testing"
-	   And i enter confirm password "Testing"
 	   And i click on Register button
 	   Then i should not see "Sign in"

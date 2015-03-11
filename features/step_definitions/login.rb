@@ -1,6 +1,6 @@
 Given(/^i'm on Global Lab Homepage$/) do
    @@login.open_url STAGING_URL
-   @@helper.wait_for_elementonscreen_by_xpath("//button[@type='button']")
+   @@helper.wait_for_elementonscreen_by_xpath(".//*[@id='ng-app']/div[1]/nav/div/a")
   sleep 2
 end
 

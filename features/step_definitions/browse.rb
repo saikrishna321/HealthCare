@@ -1,4 +1,5 @@
 Then(/^i should see innovations$/) do
+	sleep 10
 	@@helper.wait_for_elementonscreen_by_xpath(".//*[@id='ng-app']/div[2]/div[1]/div[2]/div[2]/div/div[1]/gl-innovation-card/div/div/h4")
 	total_innovations= @@driver.find_elements(:css, ".col-xs-12.col-sm-6.col-md-4.ng-scope").size
 	total_innovations.times do

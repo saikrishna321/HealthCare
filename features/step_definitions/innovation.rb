@@ -15,10 +15,10 @@ And(/^i complete the inventory innovation process$/) do
 	sleep 10
 	@@@driver.find_element(:xpath, ".//*[@id='ng-app']/div[2]/div[4]/button[2]").click
 =end
-
+  sleep 5
+  @@driver.find_element(:xpath, ".//*[@id='ng-app']/div[2]/div[2]/div[2]/button").click
 	@@driver.find_element(:id, "innovationName").send_keys "testing123"
-	@@driver.find_element(:xpath, "(//input[@name='category'])[5]").click
-	@@driver.find_element(:css, "button.interview-butt").click
+	@@driver.find_element(:xpath, ".//*[@id='ng-app']/div[2]/div[3]/div[1]/form/div[2]/label[2]/input[1]").click
 	@@driver.find_element(:xpath, "//div[@id='ng-app']/div[2]/div[3]/div[2]/button").click
 	sleep 3
 	wait = Selenium::WebDriver::Wait.new(:timeout => WAIT_TIME) # seconds

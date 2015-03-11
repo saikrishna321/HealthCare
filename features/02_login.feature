@@ -42,6 +42,7 @@ Feature: Login
     @cancel_login
     Scenario: To verify, as user I am able to cancel the sign in
 	   Given i'm on Global Lab Homepage
+	   And i logout from the application if user is logged in
 	   And i click on Sign in button
 	   When i click on cancel button
 	   Then i should not see the login module
@@ -50,6 +51,7 @@ Feature: Login
     @logout
     Scenario: To verify, as user I am able to Log Out
 	   Given i'm on Global Lab Homepage
+	   And i logout from the application if user is logged in
 	   When i login into the application
 	   Then i should see the user logged
 	   And i logout from the application
@@ -77,7 +79,7 @@ Feature: Login
 	   And i logout from the application if user is logged in
 	   And i should see "Sign in"
 	   When i click on About Button
-	   Then i should see "Welcome to the Global Lab for Health - the innovation exchange for affordable care"
+	   Then i should see "Welcome to the Global Lab for Health | the innovation exchange."
 
     Scenario: To verify, while sign in 'My Saved Innovations' filter option is shown in Browse screen
 	   Given i'm on Global Lab Homepage
