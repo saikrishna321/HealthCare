@@ -13,4 +13,4 @@ Feature: Registration
 	   And i enter organisation as "Tests"
 	   And i enter the password "Testing"
 	   And i click on Register button
-	   Then i should not see "Sign in"
+	   Then i should see "Testing123"
