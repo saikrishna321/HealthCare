@@ -8,7 +8,7 @@ Feature: Browse
 	   When i click on Browse button
 	   Then i should see innovations
 
-
+    @ignore
     Scenario: To verify user able see the 'Innovation Inventory' while signed in
 	   Given i'm on Global Lab Homepage
 	   And i logout from the application if user is logged in
