@@ -34,7 +34,7 @@ class Login
 	end
 
 	def click_register
-		@@driver.find_element(:xpath, "html/body/div[3]/div/div/form/div[2]/span/a").click
+		@@driver.find_element(:xpath, "html/body/div[4]/div/div/form/div[2]/span/a").click
 		wait = Selenium::WebDriver::Wait.new(:timeout => WAIT_TIME) # seconds
 		wait.until { @@driver.find_element(:xpath => ".//*[@id='firstName']") }
 	end

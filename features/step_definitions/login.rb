@@ -12,6 +12,7 @@ When(/^i login into the application$/) do
 end
 
 Then(/^i should see the user logged$/) do
+	sleep 5
   expected=@@driver.find_element(:css,LOGGED_IN_USERNAME).text
   expect(USERNAME).to eq(expected)
 end
@@ -31,6 +32,7 @@ And(/^i click on Sign in button$/) do
 end
 
 When(/^i click on cancel button$/) do
+	sleep 0.8
   @@driver.find_element(:xpath,LOGIN_CANCEL_BUTTON).click
   sleep 0.8
 end

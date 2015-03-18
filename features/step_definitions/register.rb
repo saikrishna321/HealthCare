@@ -47,7 +47,7 @@ end
 
 And(/^i click on Register button$/) do
 	sleep 1.8
-	@@driver.find_element(:xpath, "html/body/div[4]/div/div/form/div[3]/button[2]").click
+	@@driver.find_element(:xpath, "html/body/div[5]/div/div/form/div[3]/button[2]").click
 	sleep 4
 end
 

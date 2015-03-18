@@ -1,6 +1,6 @@
 Feature: Innovation
 
-    @submitting_innovation @regression
+    @submitting_innovation @regression @ignore
     Scenario: To verify, as user I am able to submit the innovation
 	   Given i'm on Global Lab Homepage
 	   And i logout from the application if user is logged in
