@@ -114,7 +114,7 @@ When(/^i select multiple groups with index "([^"]*)"$/) do |arg|
 end
 
 And(/^i delete the selected groups$/) do
-	option = Selenium::WebDriver::Support::Select.new(driver.find_element(:xpath => "//select"))
+	option = Selenium::WebDriver::Support::Select.new(@@driver.find_element(:xpath => "//select"))
 	option.select_by(:text, "Delete selected groups")
 	sleep 2
 	#click Yes i'm sure
