@@ -18,3 +18,13 @@ SUBMIT_INNOVATION=".//*[@id='home']/div[2]/div/div[1]"
 TERMS_AND_CONDITION=".//*[@id='#footer']/div/nav/div/nav/div/div/ul/li[1]/a"
 PRIVACY=".//*[@id='#footer']/div/nav/div/nav/div/div/ul/li[2]/a"
 CONTACT=".//*[@id='#footer']/div/nav/div/nav/div/div/ul/li[3]/a"
+ADD_GROUP=".//*[@id='model-group']/ul/li[1]/a"
+
+module ApplicationID
+	SAVE_CONTINUE_EDIT=".//*[@id='group_form']/div/footer/ul/li[3]/input"
+	DELETE=".//*[@id='group_form']/div/footer/ul/li[1]/a"
+	SAVE_ANOTHER=".//*[@id='group_form']/div/footer/ul/li[2]/input"
+	ADD_GROUP_HEADER=".//*[@id='grp-content-title']/h1"
+	HISTORY=".//*[@id='grp-content-title']/ul/li/a"
+	GROUPS=".//*[@id='model-group']/a/strong"
+end

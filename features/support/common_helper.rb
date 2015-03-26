@@ -31,4 +31,8 @@ class Helpers
 	def click_by_xpath(arg)
 		@@driver.find_element(:xpath, arg).click
 	end
+
+	def get_text(arg)
+		@@driver.find_element(:xpath, arg).text
+	end
 end
