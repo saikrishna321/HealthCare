@@ -120,3 +120,44 @@ And(/^i delete the selected groups$/) do
 	#click Yes i'm sure
 	@@helper.click_by_xpath(".//*[@id='submit']/ul/li[2]/input")
 end
+
+And(/^i select a date from calendar$/) do
+	@@helper.click_by_xpath(".//*[@id='adopterinterview_form']/div/fieldset/div[2]/div/div[2]/p/button[1]")
+	#select a datr
+	@@helper.click_by_xpath(".//*[@id='ui-datepicker-div']/table/tbody/tr[4]/td[5]/a")
+	#Select time
+	@@helper.click_by_xpath(".//*[@id='adopterinterview_form']/div/fieldset/div[2]/div/div[2]/p/button[2]")
+	@@helper.click_by_xpath(".//*[@id='ui-timepicker']/ul/li[14]")
+end
+
+And(/^i select from drop down as "([^"]*)"$/) do |arg|
+	option = Selenium::WebDriver::Support::Select.new(@@driver.find_element(:xpath => "//select"))
+	option.select_by(:text, arg)
+	sleep 2
+end
+
+Then(/^I save the adopter$/) do
+	@@helper.click_by_xpath(".//*[@id='adopterinterview_form']/div/footer/ul/li[1]/input")
+end
+
+Then(/^I save the adopter with value "([^"]*)"$/) do |arg|
+	@@driver.find_element(:xpath, ".//*[@value='#{arg}']")
+end
+
+Given(/^i'm deleting all added adopter$/) do
+	@@login.open_url "http://gl-stage.blzng.com/admin/global_lab/adopterinterview/"
+	send_keys(:name, 'username', 'cucumber@example.com')
+	send_keys(:name, 'password', '@utoT3sting!')
+	#select all adopter
+	@@helper.click_by_xpath(".//*[@id='action-toggle']")
+	option = Selenium::WebDriver::Support::Select.new(@@driver.find_element(:xpath => "//select"))
+	option.select_by(:text, "Delete selected adopter interviews")
+	sleep 2
+	@@helper.click_by_xpath(".//*[@id='submit']/ul/li[2]/input")
+end
+
+And(/^i select from drop down for adopter "([^"]*)"$/) do |arg|
+	option = Selenium::WebDriver::Support::Select.new(driver.find_element(:xpath => ".//*[@id='id_adopter']"))
+	option.select_by(:text, "dan.iterationgroup.com@example.com")
+	sleep 2
+end

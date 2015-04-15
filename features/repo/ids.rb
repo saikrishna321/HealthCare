@@ -27,4 +27,6 @@ module ApplicationID
 	ADD_GROUP_HEADER=".//*[@id='grp-content-title']/h1"
 	HISTORY=".//*[@id='grp-content-title']/ul/li/a"
 	GROUPS=".//*[@id='model-group']/a/strong"
+	ADOPTER_ADD=".//*[@id='model-adopterinterview']/ul/li[1]/a"
+	DELETE_ADOPTER=".//*[@id='adopterinterview_form']/div/footer/ul/li[1]/a"
 end
