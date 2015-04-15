@@ -141,23 +141,30 @@ Then(/^I save the adopter$/) do
 end
 
 Then(/^I save the adopter with value "([^"]*)"$/) do |arg|
-	@@driver.find_element(:xpath, ".//*[@value='#{arg}']")
+	@@driver.find_element(:xpath, ".//*[@value='#{arg}']").click
 end
 
 Given(/^i'm deleting all added adopter$/) do
 	@@login.open_url "http://gl-stage.blzng.com/admin/global_lab/adopterinterview/"
 	send_keys(:name, 'username', 'cucumber@example.com')
 	send_keys(:name, 'password', '@utoT3sting!')
+	@@helper.click_by_xpath("html/body/div[1]/article/div/div/form/div/ul/li/input")
 	#select all adopter
-	@@helper.click_by_xpath(".//*[@id='action-toggle']")
-	option = Selenium::WebDriver::Support::Select.new(@@driver.find_element(:xpath => "//select"))
-	option.select_by(:text, "Delete selected adopter interviews")
 	sleep 2
-	@@helper.click_by_xpath(".//*[@id='submit']/ul/li[2]/input")
+	checkbox_delete=@@driver.find_elements(:xpath, ".//*[@id='action-toggle']").size > 0
+	if checkbox_delete
+		@@helper.click_by_xpath(".//*[@id='action-toggle']")
+		option = Selenium::WebDriver::Support::Select.new(@@driver.find_element(:xpath => "//select"))
+		option.select_by(:text, "Delete selected adopter interviews")
+		sleep 2
+		@@helper.click_by_xpath(".//*[@id='submit']/ul/li[2]/input")
+	else
+		puts 'No Adopter to delete'
+	end
 end
 
 And(/^i select from drop down for adopter "([^"]*)"$/) do |arg|
-	option = Selenium::WebDriver::Support::Select.new(driver.find_element(:xpath => ".//*[@id='id_adopter']"))
+	option = Selenium::WebDriver::Support::Select.new(@@driver.find_element(:xpath => ".//*[@id='id_adopter']"))
 	option.select_by(:text, "dan.iterationgroup.com@example.com")
 	sleep 2
 end
