@@ -29,4 +29,5 @@ module ApplicationID
 	GROUPS=".//*[@id='model-group']/a/strong"
 	ADOPTER_ADD=".//*[@id='model-adopterinterview']/ul/li[1]/a"
 	DELETE_ADOPTER=".//*[@id='adopterinterview_form']/div/footer/ul/li[1]/a"
+	HISTORY=".//*[@id='grp-content-title']/ul/li/a"
 end

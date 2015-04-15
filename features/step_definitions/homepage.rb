@@ -11,7 +11,7 @@ end
 
 When(/^i click on About Button$/) do
 	@@helper.click_by_xpath(ABOUT_BUTTON)
-	sleep 1.3
+	sleep 3
 end
 
 And(/^i click on Submit Innovations$/) do
