@@ -21,4 +21,5 @@ tmp
 *.a
 mkmf.log
 .idea/
+screenshot/fail/*.png
 *.html

@@ -15,6 +15,7 @@ BEGIN {
 	$VERBOSE = nil
 }
 
+@@project_path=File.expand_path("../../../", __FILE__)
 Before do |scenario|
 	if ENV["BROWSER"] == "firefox"
 		@@driver = Selenium::WebDriver.for :firefox
@@ -30,6 +31,14 @@ end
 
 
 After do |scenario|
+	unless File.directory?(@@project_path +'/screenshot/fail')
+		FileUtils.mkdir_p(@@project_path+'/screenshot/fail')
+	end
+	if scenario.failed?
+		screen_path=@@project_path+"/screenshot/fail/sc_#{Time.now.to_i}.png"
+		@@driver.save_screenshot(screen_path)
+		embed(screen_path, "image/png", "FailedScenario")
+	end
 	@@driver.quit
 end
 
