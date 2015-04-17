@@ -35,9 +35,10 @@ After do |scenario|
 		FileUtils.mkdir_p(@@project_path+'/screenshot/fail')
 	end
 	if scenario.failed?
-		screen_path=@@project_path+"/screenshot/fail/sc_#{Time.now.to_i}.png"
+		screen_shot_name="screenshot/fail/sc_#{Time.now.to_i}.png"
+		screen_path=@@project_path+'/'+screen_shot_name
 		@@driver.save_screenshot(screen_path)
-		embed(screen_path, "image/png", "FailedScenario")
+		embed(screen_shot_name, "image/png", "FailedScenario")
 	end
 	@@driver.quit
 end
