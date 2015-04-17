@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - "2.0.0-p247"
+
+before_script:
+  - "sh -e /etc/init.d/xvfb start"
+  - "export DISPLAY=99:0"
+
+before_install:
+  - gem install selenium-webdriver
+  - gem install cucumber
+
+script:
+bundle exec cucumber --tags @regression BROWSER=firefox LOGIN=test@gmail.com:123456 --tags ~@ignore --guess
