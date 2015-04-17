@@ -30,4 +30,7 @@ module ApplicationID
 	ADOPTER_ADD=".//*[@id='model-adopterinterview']/ul/li[1]/a"
 	DELETE_ADOPTER=".//*[@id='adopterinterview_form']/div/footer/ul/li[1]/a"
 	HISTORY=".//*[@id='grp-content-title']/ul/li/a"
+	CHANGE_ADOPTER=".//*[@id='app_global_lab']/div[1]/ul/li[2]/a"
+	GLOBAL_CRUMB=".//*[@id='grp-breadcrumbs']/ul/li[2]/a"
+	ADDED_ADOPTER=".//*[@id='result_list']/tbody/tr[1]/th/a"
 end
