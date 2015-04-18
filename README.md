@@ -1,4 +1,7 @@
-Pre-Requisite
+## Travis CI ember web client
+[![Build Status](https://travis-ci.org/saikrishna321/HealthCare.svg?branch=master)]
+
+### Pre-Requisite
 
     1.Ruby -v 2.0.0 and above
     2.Firefox Browser
@@ -12,7 +15,7 @@ Pre-Requisite
 => Open terminal navigate to the project cloned and run the command
         bundle install ( Will install all the required gem files that helps to execute the tests)
 
-=> Executing the scripts on Firefox
+#### Executing the scripts on Firefox
 
          1.cucumber --tags @regression --format html --out regression.html BROWSER=firefox LOGIN=username:password( To run the tests in firefox browser)
          2.cucumber --tags @regression --format html --out regression.html BROWSER=chrome LOGIN=username:password( To run the tests in chrome browser)
