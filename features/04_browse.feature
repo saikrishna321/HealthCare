@@ -1,6 +1,6 @@
 @regression
 Feature: Browse
-
+    @anonymously
     Scenario: To verify user able see the 'Innovation Inventory' anonymously
 
 	   Given i'm on Global Lab Homepage

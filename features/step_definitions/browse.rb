@@ -5,6 +5,8 @@ Then(/^i should see innovations$/) do
 	total_innovations.times do
 		@@i||=1
 		sleep 0.2
+		puts @@i
+		break if @@i == total_innovations
 		puts @@driver.find_element(:xpath, ".//*[@id='ng-app']/div[2]/div[1]/div[2]/div[2]/div/div["+@@i.to_s+"]/gl-innovation-card/div/div/h4").text
 		@@i+=1
 	end
