@@ -1,5 +1,5 @@
 ## Travis CI ember web client
-[![Build Status](https://travis-ci.org/saikrishna321/HealthCare.svg?branch=master)][https://travis-ci.org/saikrishna321/HealthCare]
+[![Build Status](https://travis-ci.org/saikrishna321/HealthCare.png)][https://travis-ci.org/saikrishna321/HealthCare]
 
 ### Pre-Requisite
 
