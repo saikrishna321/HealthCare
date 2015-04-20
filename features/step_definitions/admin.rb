@@ -32,6 +32,7 @@ end
 
 
 def enter_group_name
+	@@helper.wait_for_elementonscreen_by_xpath(".//*[@id='id_name']")
 	random_string = SecureRandom.hex(4)
 	@@str='Testing'+random_string
 	send_keys(:xpath, ".//*[@id='id_name']", @@str)
