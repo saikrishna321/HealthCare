@@ -11,7 +11,6 @@ BROWSE_BUTTON=".//*[@id='ng-app']/div[1]/nav/div/div/ul[1]/li[2]/a"
 INNOVATION_INVENTORY=".//*[@id='ng-app']/div[2]/div[1]/div[1]/div/h3"
 INNOVATION_CARD=".//*[@id='ng-app']/div[2]/div[1]/div[2]/div[2]/div/div[1]/gl-innovation-card/div"
 SUBMIT_BUTTON=".//*[@id='ng-app']/div[1]/nav/div/div/ul[1]/li[1]/a"
-ABOUT_BUTTON=".//*[@id='ng-app']/div[1]/nav/div/div/ul[1]/li[5]/a"
 MY_SAVED_INNOVATION=".//*[@id='ng-app']/div[2]/div/div[2]/div[1]/div/div[2]/div[2]/div/label/input"
 INNOVATIONS=".//*[@id='ng-app']/div[2]/div[1]/div[2]/div[2]/div/div[1]/gl-innovation-card/div/div/div/h3"
 SUBMIT_INNOVATION=".//*[@id='home']/div[2]/div/div[1]"
@@ -33,4 +32,5 @@ module ApplicationID
 	CHANGE_ADOPTER=".//*[@id='app_global_lab']/div[1]/ul/li[2]/a"
 	GLOBAL_CRUMB=".//*[@id='grp-breadcrumbs']/ul/li[2]/a"
 	ADDED_ADOPTER=".//*[@id='result_list']/tbody/tr[1]/th/a"
+	ABOUT_BUTTON=".//*[@id='ng-app']/div[1]/nav/div/div/ul[1]/li[5]/a"
 end

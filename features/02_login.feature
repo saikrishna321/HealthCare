@@ -78,7 +78,7 @@ Feature: Login
 	   Given i'm on Global Lab Homepage
 	   And i logout from the application if user is logged in
 	   And i should see "Sign in"
-	   When i click on About Button
+	   When i click on ABOUT_BUTTON
 	   Then i should see "Welcome to the Global Lab for Health | the innovation exchange."
 
     Scenario: To verify, while sign in 'My Saved Innovations' filter option is shown in Browse screen
