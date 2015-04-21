@@ -79,7 +79,7 @@ Feature: Login
 	   And i logout from the application if user is logged in
 	   And i should see "Sign in"
 	   When i click on ABOUT_BUTTON
-	   Then i should see "Welcome to the Global Lab for Health | the innovation exchange."
+	   Then i should see "Welcome to the Global Lab for Health"
 
     Scenario: To verify, while sign in 'My Saved Innovations' filter option is shown in Browse screen
 	   Given i'm on Global Lab Homepage
