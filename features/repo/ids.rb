@@ -35,4 +35,5 @@ module ApplicationID
 	ABOUT_BUTTON=".//*[@id='ng-app']/div[1]/nav/div/div/ul[1]/li[5]/a"
   ADD_CHALLENGE=".//*[@id='model-challenge']/ul/li[1]/a"
   SAVE_CHALLENGE=".//*[@id='challenge_form']/div/footer/ul/li[1]/input"
+  SAVE_CONTINUE_CHALLENGE=".//*[@id='challenge_form']/div/footer/ul/li[3]/input"
 end

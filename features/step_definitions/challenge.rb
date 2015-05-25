@@ -21,3 +21,9 @@ Given(/^i'm deleting all added challenge$/) do
     puts 'No challenge  to delete'
   end
 end
+
+Then(/^i should be able to edit the same challenge$/) do
+  @@driver.find_element(:xpath,".//*[@id='id_name']").send_keys "chanllegechanged"
+  actual_text=@@helper.get_text(".//*[@id='id_name']")
+  expect(actual_text).not_to eql("TestChallenge")
+end
