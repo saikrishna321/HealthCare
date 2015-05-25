@@ -33,4 +33,6 @@ module ApplicationID
 	GLOBAL_CRUMB=".//*[@id='grp-breadcrumbs']/ul/li[2]/a"
 	ADDED_ADOPTER=".//*[@id='result_list']/tbody/tr[1]/th/a"
 	ABOUT_BUTTON=".//*[@id='ng-app']/div[1]/nav/div/div/ul[1]/li[5]/a"
+  ADD_CHALLENGE=".//*[@id='model-challenge']/ul/li[1]/a"
+  SAVE_CHALLENGE=".//*[@id='challenge_form']/div/footer/ul/li[1]/input"
 end
