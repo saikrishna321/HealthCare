@@ -36,4 +36,6 @@ module ApplicationID
   ADD_CHALLENGE=".//*[@id='model-challenge']/ul/li[1]/a"
   SAVE_CHALLENGE=".//*[@id='challenge_form']/div/footer/ul/li[1]/input"
   SAVE_CONTINUE_CHALLENGE=".//*[@id='challenge_form']/div/footer/ul/li[3]/input"
+  SAVE_ADD_ANOTHER=".//*[@id='challenge_form']/div/footer/ul/li[2]/input"
+  DELETE_CHALLENGE=".//*[@id='challenge_form']/div/footer/ul/li[1]/a"
 end
