@@ -12,7 +12,7 @@ before_install:
 
 script:
 - bundle update selenium-webdriver
-- bundle exec cucumber --tags @regression --format out --html regression.html  BROWSER=firefox LOGIN=test@gmail.com:123456 --tags ~@ignore --guess
+- bundle exec cucumber --tags @regression --format html --out regression.html  BROWSER=firefox LOGIN=test@gmail.com:123456 --tags ~@ignore --guess
 
 notifications:
   email:
