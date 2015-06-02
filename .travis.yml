@@ -16,7 +16,10 @@ script:
 
 notifications:
   email:
+   recipients:
     - gireesha21@gmail.com
     - sri@neurlabs.com
     - ptevans@gmail.com
     - saikrishnave38@gmail.com
+     on_success: always
+     on_failure: always
