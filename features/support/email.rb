@@ -1,5 +1,5 @@
 require 'net/smtp'
-require 'FileUtils'
+require 'fileutils'
 class Email
   def send_report
   filename = 'D:\reports.html'
