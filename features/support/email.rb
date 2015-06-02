@@ -1,8 +1,7 @@
 require 'net/smtp'
 require 'fileutils'
 class Email
-  def send_report(arg)
-  filename = arg
+  def send_report(filename)
 # Read a file and encode it into base64 format
 filecontent = File.read(filename)
 encodedcontent = [filecontent].pack("m")   # base64
@@ -67,6 +66,3 @@ rescue
 end
   end
 end
-
-api=Email.new
-api.send_report
