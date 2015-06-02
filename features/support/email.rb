@@ -1,8 +1,8 @@
 require 'net/smtp'
 require 'fileutils'
 class Email
-  def send_report
-  filename = 'D:\reports.html'
+  def send_report(arg)
+  filename = arg
 # Read a file and encode it into base64 format
 filecontent = File.read(filename)
 encodedcontent = [filecontent].pack("m")   # base64

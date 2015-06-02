@@ -46,7 +46,7 @@ end
 
 at_exit do
   puts 'Sending Email with Report'
-   @@email.send_report
+   @@email.send_report(@@project_path+'/regression.html')
 end
 
 @@login=Login.new
