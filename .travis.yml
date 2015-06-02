@@ -21,5 +21,4 @@ notifications:
     - sri@neurlabs.com
     - ptevans@gmail.com
     - saikrishnave38@gmail.com
-     on_success: always
-     on_failure: always
+   on_success: always
