@@ -7,6 +7,7 @@ require 'rspec/expectations'
 require 'selenium-webdriver'
 require File.dirname(__FILE__) + '/../../features/repo/ids.rb'
 require File.dirname(__FILE__) + '/common_helper.rb'
+require File.dirname(__FILE__) + '/email.rb'
 Dir[File.dirname(__FILE__) + '/../../features/pages/*.rb'].each do |file|
 	puts file
 	require file
@@ -43,7 +44,13 @@ After do |scenario|
 	@@driver.quit
 end
 
+at_exit do
+  puts 'Sending Email with Report'
+   @@email.send_report
+end
+
 @@login=Login.new
 @@helper=Helpers.new
+@@email=Email.new
 
 
