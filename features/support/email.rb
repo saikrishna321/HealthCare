@@ -16,7 +16,7 @@ smtp_host   = 'localhost'
 smtp_port   =  587
 smtp_domain = 'smtp.gmail.com'
 smtp_user   ='mobilehsc@gmail.com'
-smtp_pwd    = 'tesco123'
+smtp_pwd    = 'India123@'
 #The subject and the message
 t = Time.now
 subj = 'Sending Email with Ruby'
